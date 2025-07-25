@@ -1,0 +1,39 @@
+/* styles/particles.css */
+/* Animacja cząsteczek do sekcji "Jak pracujemy" */
+
+@keyframes flowPath {
+    0% { 
+      transform: translateX(0) translateY(0); 
+      opacity: 0; 
+    }
+    10% { 
+      opacity: 1; 
+    }
+    25% { 
+      transform: translateX(100%) translateY(0); 
+    }
+    50% { 
+      transform: translateX(100%) translateY(100%); 
+    }
+    75% { 
+      transform: translateX(0) translateY(100%); 
+    }
+    90% { 
+      opacity: 1; 
+    }
+    100% { 
+      transform: translateX(0) translateY(0); 
+      opacity: 0; 
+    }
+  }
+  
+  .particle-path::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.6), transparent);
+    border-radius: 2px;
+    filter: blur(4px);
+    animation: flowPath 6s infinite ease-in-out;
+  }

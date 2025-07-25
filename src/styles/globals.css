@@ -1,14 +1,18 @@
+/* styles/globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: 'Inter', sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -19,8 +23,177 @@
   }
 }
 
+html {
+  font-size: 18px;  /* domyślny rozmiar typografii */
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+/* animacja dryfujących nawiasów */
+@keyframes drift {
+  from { transform: translateY(-50%) translateX(0); }
+  to   { transform: translateY(-50%) translateX(30px); }
+}
+
+.bracket {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: drift 3s ease-in-out infinite alternate;
+  font-weight: 600;
+}
+
+.bracket--reverse {
+  animation-direction: alternate-reverse;
+}
+
+/* glitch-layers bez hardkodowanego backgroundu */
+.glitch-layer {
+  animation: glitch 2s infinite;
+}
+
+.layer1 { mix-blend-mode: screen; filter: hue-rotate(-20deg); }
+.layer2 { mix-blend-mode: screen; filter: hue-rotate(20deg); }
+
+@keyframes glitch {
+  0%   { clip-path: inset(0); transform: none; }
+  10%  { clip-path: inset(10% 0 85% 0); transform: translate(-2px, -2px); }
+  20%  { clip-path: inset(85% 0 10% 0); transform: translate(2px, 2px); }
+  30%  { clip-path: inset(0); transform: none; }
+  100% { clip-path: inset(0); transform: none; }
+}
+/* CSS dla glitch-layerów */
+.glitch-layer {
+  animation: glitch 2s infinite;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.layer1 { mix-blend-mode: screen; filter: hue-rotate(-20deg); }
+.layer2 { mix-blend-mode: screen; filter: hue-rotate(20deg); }
+
+@keyframes glitch {
+  0%   { clip-path: inset(0); transform: none; }
+  10%  { clip-path: inset(10% 0 85% 0); transform: translate(-2px,-2px); }
+  20%  { clip-path: inset(85% 0 10% 0); transform: translate(2px,2px); }
+  30%  { clip-path: inset(0); transform: none; }
+  100% { clip-path: inset(0); transform: none; }
+}
+
+/* Add this to your globals.css file */
+
+@keyframes pulse {
+  0% { opacity: 0.3; transform: translateY(-50%) scale(1); }
+  50% { opacity: 0.6; transform: translateY(-50%) scale(1.05); }
+  100% { opacity: 0.3; transform: translateY(-50%) scale(1); }
+}
+
+@keyframes driftLeft {
+  0% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+  50% { transform: translateY(-50%) translateX(5px) rotate(-2deg); }
+  100% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+}
+
+@keyframes driftRight {
+  0% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+  50% { transform: translateY(-50%) translateX(-5px) rotate(2deg); }
+  100% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+}
+
+.footer-bracket-left {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  animation: driftLeft 3s ease-in-out infinite, pulse 4s ease-in-out infinite;
+  color: rgba(220, 38, 38, 0.7); /* text-red-600 with opacity */
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.footer-bracket-right {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  animation: driftRight 3s ease-in-out infinite, pulse 4s ease-in-out infinite;
+  color: rgba(220, 38, 38, 0.7); /* text-red-600 with opacity */
+  font-size: 2rem;
+  line-height: 1;
+}
+
+
+@keyframes flowPath {
+  0% { transform: translateX(0) translateY(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  25% { transform: translateX(100%) translateY(0); }
+  50% { transform: translateX(100%) translateY(100%); }
+  75% { transform: translateX(0) translateY(100%); }
+  90% { opacity: 0.8; }
+  100% { transform: translateX(0) translateY(0); opacity: 0; }
+}
+
+.particle-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle-path::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.6), transparent);
+  border-radius: 2px;
+  filter: blur(4px);
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.4);
+  animation: flowPath 6s infinite ease-in-out;
+}
+
+
+@media (max-width: 640px) {
+  .font-display {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.2;
+  }
+  
+  p {
+    font-size: clamp(0.875rem, 4vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+.scroll-particles {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(179, 0, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(179, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(179, 0, 0, 0); }
+}
+
+.scroll-target-pulse {
+  animation: pulse-red 1.5s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;       /* płynne przewijanie */
+  scroll-padding-top: 80px;      /* kompensuje sticky header 80px */
 }

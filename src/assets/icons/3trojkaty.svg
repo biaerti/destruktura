@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="241.1 229 177 100" width="177px" height="100px"><defs><linearGradient id="Gradient_bez_nazwy_93" data-name="Gradient bez nazwy 93" x1="48.66" y1="279" x2="1220.96" y2="279" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e8eaea"/><stop offset="0.15" stop-color="#e8eaea"/><stop offset="0.17" stop-color="#e8eaea"/><stop offset="0.17" stop-color="#e6e3e4"/><stop offset="0.21" stop-color="#ddbabc"/><stop offset="0.25" stop-color="#d59597"/><stop offset="0.3" stop-color="#ce7478"/><stop offset="0.35" stop-color="#c8595d"/><stop offset="0.41" stop-color="#c34348"/><stop offset="0.48" stop-color="#bf3237"/><stop offset="0.56" stop-color="#bc262c"/><stop offset="0.68" stop-color="#bb1f25"/><stop offset="1" stop-color="#bb1e24"/></linearGradient><style>
+      .cls-1 {
+        fill: url(#Gradient_bez_nazwy_64);
+      }
+
+      .cls-2 {
+        fill: url(#Gradient_bez_nazwy_93);
+      }
+    </style></defs><path class="cls-2" d="M 331.1 234 L 310.1 304 L 241.1 304 L 331.1 234 M 418.1 229 L 343.1 234 L 345.1 275 L 418.1 229 Z M 385.1 281 L 360.1 299 L 386.1 329 L 385.1 281 Z" id="object-0"/></svg>
