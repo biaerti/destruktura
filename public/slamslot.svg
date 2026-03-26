@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+    </style>
+  </defs>
   <rect width="400" height="200" fill="#0a0a0a"/>
-  <text x="200" y="100" font-family="Arial Black, sans-serif" font-size="64" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="middle" letter-spacing="4">SLAM</text>
-  <text x="200" y="160" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#dc2626" text-anchor="middle" dominant-baseline="middle" letter-spacing="8">SLOT</text>
+  <text x="200" y="108" font-family="'Bebas Neue', Arial Black, sans-serif" font-size="90" fill="white" text-anchor="middle" dominant-baseline="middle" letter-spacing="6">SLAM</text>
+  <text x="200" y="170" font-family="'Bebas Neue', Arial Black, sans-serif" font-size="52" fill="#dc2626" text-anchor="middle" dominant-baseline="middle" letter-spacing="14">SLOT</text>
 </svg>

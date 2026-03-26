@@ -19,9 +19,9 @@ type Socials = {
 };
 
 const stats = [
-  { label: 'Z kim walczymy?', value: 'PKP' },
-  { label: 'O kogo walczymy?', value: 'Podróżni w potrzebie' },
-  { label: 'Orientacja polityczna', value: 'Lewicowy' },
+  { label: 'Przeciwko', value: 'Płatnym toaletom na PKP' },
+  { label: 'Dla kogo', value: 'Wszystkich podróżnych' },
+  { label: 'Format', value: 'Kampania społeczna' },
 ];
 
 const team: {
