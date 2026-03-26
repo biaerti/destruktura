@@ -94,7 +94,7 @@ export default function MisjonarzePTGA() {
               </div>
             </div>
             <div className="flex-1 flex items-center justify-center px-8">
-              <div className="text-center">
+              <div className="text-left">
                 <h1 className="text-white font-display text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight">
                   Misjonarze PTGA
                 </h1>
