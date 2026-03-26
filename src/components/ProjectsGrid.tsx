@@ -10,7 +10,7 @@ const Lottie = dynamic(() => import('lottie-react').then(m => m.default), { ssr:
 // import animacji z folderu src/lottie
 import comingSoonAnimation from '@/lottie/coming-soon.json';
 
-const projects = [
+const projects: { title: string; description: string; image: string | null; href: string }[] = [
   {
     title: 'Wolne Kible',
     description:
@@ -36,7 +36,7 @@ const projects = [
     title: 'SlamSlot',
     description:
       'Narzędzie do zapisów na slamy poetyckie. Formularz gotowy w kilka sekund, dashboard dla organizatora.',
-    image: '/slamslot.svg',
+    image: null,
     href: '/projects/slamslot',
   },
 ];
@@ -51,13 +51,22 @@ export default function ProjectsGrid() {
             className="relative bg-black rounded-2xl overflow-hidden border-2 border-red-700 shadow-lg hover:scale-105 transition-transform duration-200"
           >
             <div className="relative w-full h-48 flex items-center justify-center bg-gray-900">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={200}
-                height={200}
-                className="object-contain"
-              />
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={200}
+                  height={200}
+                  className="object-contain"
+                />
+              ) : (
+                <span
+                  className="text-white font-black uppercase tracking-widest select-none"
+                  style={{ fontSize: '3.2rem', fontFamily: "'Arial Black', Impact, sans-serif", letterSpacing: '0.08em' }}
+                >
+                  {project.title}
+                </span>
+              )}
             </div>
             <div className="p-6">
               <h3 className="text-xl font-display text-white">
