@@ -29,20 +29,22 @@ const projects = [
     title: 'Abotax',
     description:
       'System podatkowy godzący prawo do życia i prawo do decydowania o własnym ciele.',
-    // Używamy zdalnego pliku z abotax.pl – upewnij się, że host jest dodany do next.config.js (images.remotePatterns)
     image: 'https://abotax.pl/logo_abotax.png',
     href: '/projects/abotax',
+  },
+  {
+    title: 'SlamSlot',
+    description:
+      'Narzędzie do zapisów na slamy poetyckie. Formularz gotowy w kilka sekund, dashboard dla organizatora.',
+    image: '/slamslot.svg',
+    href: '/projects/slamslot',
   },
 ];
 
 export default function ProjectsGrid() {
   return (
-    <section id="projects" className="py-24 container mx-auto px-6">
-      <h2 className="text-3xl md:text-4xl font-display text-white mb-12 text-center">
-        Nasze projekty
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="container mx-auto pt-16 pb-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div
             key={project.title}
@@ -95,6 +97,29 @@ export default function ProjectsGrid() {
           </p>
         </div>
       </div>
-    </section>
+
+      {/* Tekst wyjaśniający pod projektami */}
+      <div className="max-w-6xl mx-auto mt-16 px-6">
+        <div className="relative">
+          <div className="absolute left-0 top-0 text-red-600 text-4xl font-bold opacity-30">
+            [
+          </div>
+          <div className="absolute right-0 top-0 text-red-600 text-4xl font-bold opacity-30">
+            ]
+          </div>
+          <div className="px-12 py-6">
+            <h4 className="text-red-500 font-bold mb-4 text-center" style={{ fontSize: '27px' }}>
+              Społeczne projekty naszej marki
+            </h4>
+            <p className="text-gray-300 leading-relaxed text-center" style={{ fontSize: '20px' }}>
+              Wierzymy, że agencja która zajmuje się kontrowersyjnymi kampaniami powinna sama coś reprezentować. 
+              Dlatego robimy własne społeczne projekty non-profit, które poruszają tematy, których inni się boją: 
+              aborcja, terapie homoseksualizmu, darmowe toalety na PKP. Lewicowe, prawicowe, antypolaryzujące – 
+              nie zamykamy się w jednej bańce. Kształtujemy rzeczywistość zamiast tylko o niej gadać.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
