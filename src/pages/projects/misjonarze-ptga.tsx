@@ -94,11 +94,11 @@ export default function MisjonarzePTGA() {
               </div>
             </div>
             <div className="flex-1 flex items-center justify-center px-8">
-              <div className="text-left">
+              <div className="text-center">
                 <h1 className="text-white font-display text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight">
                   Misjonarze PTGA
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-lg">
+                <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-lg bg-black/60 rounded-lg px-4 py-2">
                   Eksperyment społeczny, który pokazał jak łatwo przyjmujemy to, co już wiemy — i jak trudno rozmawiać o tym, co nas naprawdę różni.
                 </p>
               </div>
