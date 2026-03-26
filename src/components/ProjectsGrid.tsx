@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 // dynamiczny import Lottie, ssr:false wyłącza ładowanie po stronie serwera
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+const Lottie = dynamic(() => import('lottie-react').then(m => m.default), { ssr: false });
 // import animacji z folderu src/lottie
 import comingSoonAnimation from '@/lottie/coming-soon.json';
 

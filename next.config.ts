@@ -5,12 +5,8 @@ import type { Configuration, RuleSetRule } from "webpack";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // ignoruj ESLint podczas builda
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  turbopack: {},
 
-  // wyłącz Image Optimization API dla static export
   images: {
     unoptimized: true,
   },
