@@ -1,20 +1,40 @@
 'use client';
-import React, { useEffect } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export default function ContactForm() {
-  // Podmień "xnndnkwd" na swoje ID formularza z Formspree
-  const [state, handleSubmit] = useForm('xnndnkwd');
   const router = useRouter();
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  // Po udanym wysłaniu przekierowuj na /thank-you
-  useEffect(() => {
-    if (state.succeeded) {
-      setTimeout(() => router.push('/thank-you'), 500);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus('submitting');
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setTimeout(() => router.push('/thank-you'), 500);
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
     }
-  }, [state.succeeded, router]);
+  }
 
   // Glitchowy jitter na focus pól
   useEffect(() => {
@@ -30,10 +50,9 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto py-16 px-6">
-      {/* Poprawiony nagłówek - Montserrat 400, do lewej */}
+    <div className="max-w-4xl mx-auto py-0 px-6">
       <h2 className="text-3xl md:text-4xl font-display text-white mb-12 text-center">Skontaktuj się z nami!</h2>
-      
+
       <div className="max-w-md mx-auto p-10 bg-black rounded-2xl border-2 border-red-700/60 font-sans">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Imię */}
@@ -48,12 +67,6 @@ export default function ContactForm() {
               required
               className="w-full bg-transparent border-b border-gray-700 text-white placeholder-gray-500 focus:border-red-600 outline-none py-2"
               placeholder="Twoje imię"
-            />
-            <ValidationError
-              prefix="Imię"
-              field="name"
-              errors={state.errors}
-              className="text-red-500 text-xs mt-1"
             />
           </div>
 
@@ -70,12 +83,6 @@ export default function ContactForm() {
               className="w-full bg-transparent border-b border-gray-700 text-white placeholder-gray-500 focus:border-red-600 outline-none py-2"
               placeholder="email@adres.pl"
             />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-              className="text-red-500 text-xs mt-1"
-            />
           </div>
 
           {/* Wiadomość */}
@@ -90,12 +97,6 @@ export default function ContactForm() {
               rows={4}
               className="w-full bg-transparent border-b border-gray-700 text-white placeholder-gray-500 focus:border-red-600 outline-none py-2"
               placeholder="Napisz, o co chodzi..."
-            />
-            <ValidationError
-              prefix="Wiadomość"
-              field="message"
-              errors={state.errors}
-              className="text-red-500 text-xs mt-1"
             />
           </div>
 
@@ -126,10 +127,14 @@ export default function ContactForm() {
             </label>
           </div>
 
+          {status === 'error' && (
+            <p className="text-red-500 text-sm">Coś poszło nie tak. Spróbuj jeszcze raz.</p>
+          )}
+
           {/* Submit */}
           <button
             type="submit"
-            disabled={state.submitting}
+            disabled={status === 'submitting'}
             className="
               w-full py-3 mt-10
               bg-red-700/90 hover:bg-red-800/90
@@ -141,7 +146,7 @@ export default function ContactForm() {
               transition
             "
           >
-            {state.submitting ? 'Wysyłam...' : 'Wyślij wiadomość'}
+            {status === 'submitting' ? 'Wysyłam...' : 'Wyślij wiadomość'}
           </button>
         </form>
       </div>

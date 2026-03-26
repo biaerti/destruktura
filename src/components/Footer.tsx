@@ -46,6 +46,14 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+
+            {/* Dane fundacji */}
+            <div className="mt-6 space-y-1 text-xs text-gray-600">
+              <p>Fundacja Destruktura</p>
+              <p>Lotników 9B/7, 87-100 Toruń</p>
+              <p>KRS: 0001060535 &nbsp;·&nbsp; NIP: 9562387256</p>
+              <p>REGON: 526476936</p>
+            </div>
           </div>
           
           {/* Quick links */}
@@ -138,7 +146,7 @@ const Footer = () => {
           </p>
           <p className="text-xs text-gray-600 mt-2 md:mt-0">
             <span className="inline-block w-3 h-3 bg-red-600 rounded-full mr-2 align-middle"></span>
-            Toruń, Polska
+            Toruń/Wrocław, Polska
           </p>
         </div>
       </div>

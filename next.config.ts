@@ -15,10 +15,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // statyczny eksport na Hostinger
- // output: "export",
-  trailingSlash: true,
-
   webpack(config: Configuration, options: { dev?: boolean; isServer?: boolean }) {
     // ... Twoja konfiguracja SVG/SVGR
     for (const rule of config.module?.rules as RuleSetRule[]) {
