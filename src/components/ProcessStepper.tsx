@@ -9,11 +9,21 @@ import {
   BeakerIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/outline";
-// Inline SVG zamiast importu przez SVGR (Turbopack nie obsługuje SVGR)
+// Inline SVG 3 trójkąty - logo Destruktury (Turbopack nie obsługuje @svgr/webpack)
 const ExplosionIcon = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>(
   (props, ref) => (
-    <svg ref={ref} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" strokeLinecap="round" strokeLinejoin="round" />
+    <svg ref={ref} xmlns="http://www.w3.org/2000/svg" viewBox="241.1 229 177 100" {...props}>
+      <defs>
+        <linearGradient id="exp-gradient" x1="241" y1="279" x2="418" y2="279" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#e8eaea"/>
+          <stop offset="0.4" stopColor="#c34348"/>
+          <stop offset="1" stopColor="#bb1e24"/>
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#exp-gradient)"
+        d="M 331.1 234 L 310.1 304 L 241.1 304 L 331.1 234 M 418.1 229 L 343.1 234 L 345.1 275 L 418.1 229 Z M 385.1 281 L 360.1 299 L 386.1 329 L 385.1 281 Z"
+      />
     </svg>
   )
 );
