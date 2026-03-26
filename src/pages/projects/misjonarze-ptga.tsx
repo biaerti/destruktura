@@ -171,7 +171,7 @@ export default function MisjonarzePTGA() {
             <strong>III. Film, który nie dał łatwej odpowiedzi</strong>
           </p>
           <p>
-            Zamiast jednostronnej tezy, przedstawiliśmy trzy godziny materiału: lewicową narrację
+            Zamiast jednostronnej tezy, przedstawiliśmy ponad godzinę czterdzieści materiału: lewicową narrację
             na 28 tematów, te same 28 tematów z perspektywy prawicowej, i szczere podsumowanie
             wyjaśniające cel całego eksperymentu. Reakcje były skrajne — ale po raz pierwszy
             obie strony musiały zmierzyć się z lustrem.
@@ -244,20 +244,6 @@ export default function MisjonarzePTGA() {
           </ul>
         </section>
 
-        {/* DISCLAIMER */}
-        <section className="max-w-3xl mx-auto px-4 py-6 mt-8 bg-gray-900/60 border border-gray-700 rounded-lg">
-          <h4 className="text-xl font-semibold mb-2 text-red-500">Disclaimer</h4>
-          <p className="text-gray-300">
-            W początkowym etapie projektu w niektórych działaniach brał udział Mateusz Thiede.
-            Jego udział ograniczał się wyłącznie do fazy koncepcyjnej i pierwszych nagrań.
-            Dalszy kierunek projektu, finalna interpretacja oraz cała komunikacja publiczna były już tworzone
-            niezależnie od niego.
-            <br /><br />
-            Mateusz Thiede nie utożsamia się z późniejszym charakterem projektu ani narracją przedstawioną
-            w jego finalnej formie. Nasze drogi twórcze rozeszły się na wczesnym etapie, dlatego prosimy,
-            aby nie łączyć jego osoby z późniejszym przekazem projektu.
-          </p>
-        </section>
 
         {/* SOCIALS */}
         <section className="py-12 px-4">

@@ -39,7 +39,7 @@ export default function AboTaxPage() {
       {/* HERO */}
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a365d]/60 via-black to-[#1A5F5A]/40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-red-900/40 via-black to-black" />
         </div>
 
         <div className="absolute inset-0 z-10">
@@ -47,26 +47,35 @@ export default function AboTaxPage() {
         </div>
 
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-6">
-          <p className="text-[#c9a227] uppercase tracking-widest text-sm mb-4 font-semibold">
+          <p className="text-red-500 uppercase tracking-widest text-sm mb-4 font-semibold">
             Inicjatywa obywatelska
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight">
             AboTax
           </h1>
-          <p className="mt-2 text-xl md:text-2xl text-[#c9a227] font-semibold">
+          <p className="mt-2 text-xl md:text-2xl text-gray-300 font-semibold">
             Fundusz Rekompensaty Społecznej
           </p>
-          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl">
+          <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl">
             Pierwsze systemowe rozwiązanie, które kończy wojnę kulturową —
             bo skoro nie możemy się dogadać, niech dogada się matematyka.
           </p>
-          <Link
-            href="https://abotax.pl/petycja"
-            target="_blank"
-            className="mt-8 inline-block bg-[#1a365d] hover:bg-[#2d4a7c] border border-[#c9a227]/40 text-white font-bold px-8 py-3 rounded-lg transition-all"
-          >
-            ✍️ Podpisz petycję
-          </Link>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="https://abotax.pl"
+              target="_blank"
+              className="inline-block bg-red-700 hover:bg-red-800 text-white font-bold px-8 py-3 rounded-lg transition-all"
+            >
+              Zobacz stronę projektu →
+            </Link>
+            <Link
+              href="https://abotax.pl/petycja"
+              target="_blank"
+              className="inline-block border border-red-700 hover:bg-red-700/20 text-white font-bold px-8 py-3 rounded-lg transition-all"
+            >
+              ✍️ Podpisz petycję
+            </Link>
+          </div>
         </div>
       </section>
 

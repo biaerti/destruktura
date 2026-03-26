@@ -1,10 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
-    </style>
-  </defs>
-  <rect width="400" height="200" fill="#0a0a0a"/>
-  <text x="200" y="108" font-family="'Bebas Neue', Arial Black, sans-serif" font-size="90" fill="white" text-anchor="middle" dominant-baseline="middle" letter-spacing="6">SLAM</text>
-  <text x="200" y="170" font-family="'Bebas Neue', Arial Black, sans-serif" font-size="52" fill="#dc2626" text-anchor="middle" dominant-baseline="middle" letter-spacing="14">SLOT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="500" height="120">
+  <rect width="500" height="120" fill="#0a0a0a"/>
+  <text
+    x="250" y="88"
+    font-family="'Arial Black', Impact, sans-serif"
+    font-size="86"
+    font-weight="900"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="6"
+  >SLAMSLOT</text>
 </svg>
