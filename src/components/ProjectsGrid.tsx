@@ -21,14 +21,14 @@ const projects = [
   {
     title: 'Misjonarze PTGA',
     description:
-      'Podwójna prowokacja mająca na celu zdjąć piętno z terapii homoseksualizmu.',
+      'Eksperyment społeczny pokazujący, jak łatwo przyjmujemy to, co już wiemy — zamiast słuchać.',
     image: '/misjonarze_ptga.svg',
     href: '/projects/misjonarze-ptga',
   },
   {
     title: 'Abotax',
     description:
-      'System podatkowy godzący prawo do życia i prawo do decydowania o własnym ciele.',
+      'Inicjatywa obywatelska — systemowe rozwiązanie kończące wojnę kulturową. Win-win dla obu stron.',
     image: 'https://abotax.pl/logo_abotax.png',
     href: '/projects/abotax',
   },
@@ -98,28 +98,6 @@ export default function ProjectsGrid() {
         </div>
       </div>
 
-      {/* Tekst wyjaśniający pod projektami */}
-      <div className="max-w-6xl mx-auto mt-16 px-6">
-        <div className="relative">
-          <div className="absolute left-0 top-0 text-red-600 text-4xl font-bold opacity-30">
-            [
-          </div>
-          <div className="absolute right-0 top-0 text-red-600 text-4xl font-bold opacity-30">
-            ]
-          </div>
-          <div className="px-12 py-6">
-            <h4 className="text-red-500 font-bold mb-4 text-center" style={{ fontSize: '27px' }}>
-              Społeczne projekty naszej marki
-            </h4>
-            <p className="text-gray-300 leading-relaxed text-center" style={{ fontSize: '20px' }}>
-              Wierzymy, że agencja która zajmuje się kontrowersyjnymi kampaniami powinna sama coś reprezentować. 
-              Dlatego robimy własne społeczne projekty non-profit, które poruszają tematy, których inni się boją: 
-              aborcja, terapie homoseksualizmu, darmowe toalety na PKP. Lewicowe, prawicowe, antypolaryzujące – 
-              nie zamykamy się w jednej bańce. Kształtujemy rzeczywistość zamiast tylko o niej gadać.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
