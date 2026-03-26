@@ -108,7 +108,7 @@ export default function ProcessStepper() {
       ease: "power2.out",
     }, 1.2);
 
-    // 3) Rysujemy Launch od 2.2s
+    // 3) Rysujemy Launch od 3.2s (1s delay po Eksplozji)
     const launchEl = iconRefs.current[3];
     if (launchEl) {
       const launchPaths = Array.from(launchEl.querySelectorAll<SVGPathElement>("path"));
@@ -116,7 +116,7 @@ export default function ProcessStepper() {
         strokeDashoffset: 0,
         duration: 1,
         ease: "power2.inOut",
-      }, 2.2);
+      }, 3.2);
     }
   }, []);
 

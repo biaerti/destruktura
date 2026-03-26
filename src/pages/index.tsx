@@ -24,25 +24,24 @@ export default function Home() {
         <GlitchHero fullWidth={false} />
       </div>
 
-      {/* Sticky strip - zwiększamy padding, by był spójny z innymi sekcjami */}
-      <StickyStrip />
+{/* Sticky strip - przylega do hero na górze */}
+<StickyStrip />
 
-      {/* Projects - używamy jednej sekcji z nagłówkiem */}
-      <section id="projects" className="py-16 px-6">
-        <div className="container mx-auto">
-          <ProjectsGrid />
-        </div>
-      </section>
+
+    {/* Projects */}
+    <section id="projects" className="py-16 px-6">
+      <ProjectsGrid />  {/* ← bez dodatkowego container */}
+    </section>
 
       {/* Process - bez dodatkowego nagłówka, jest już wewnątrz komponentu */}
-      <div id="process" className="py-16">
+      <div id="process" className="py-4">
         <ProcessSectionWrapper>
           <ProcessStepper />
         </ProcessSectionWrapper>
       </div>
 
       {/* Contact - wyrównujemy padding */}
-      <section id="contact" className="py-16 px-6">
+      <section id="contact" className="py-12 px-6">
         <ContactForm />
       </section>
 

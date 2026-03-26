@@ -1,0 +1,604 @@
+/* ===== MOCKUP APLIKACJI ABOTAX ===== */
+
+/* Główny kontener mockupu */
+.app-mockup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 380px;
+    margin: 0 auto;
+    position: relative;
+    filter: drop-shadow(0 0 20px rgba(124, 77, 255, 0.6));
+}
+
+/* Urządzenie - ramka telefonu */
+.app-device {
+    width: 100%;
+    max-width: 380px;
+}
+
+.device-frame {
+    background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 
+        0 30px 60px rgba(0,0,0,0.4),
+        inset 0 0 0 2px rgba(255,255,255,0.1),
+        0 0 0 4px rgba(124, 77, 255, 0.3);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Notch/Dynamic Island */
+.device-frame::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 30px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Ekran urządzenia */
+.device-screen {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 700px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header aplikacji */
+.app-header {
+    background: linear-gradient(135deg, #7c4dff 0%, #6a3de8 100%);
+    padding: 40px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(124, 77, 255, 0.2);
+    position: relative;
+    z-index: 5;
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-logo-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px;
+    background: white;
+    padding: 3px;
+}
+
+.app-logo span {
+    font-weight: 700;
+    font-size: 1.3em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.user-name {
+    font-size: 0.9em;
+    opacity: 0.95;
+    font-weight: 500;
+    margin-left:35px
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Content aplikacji */
+.app-content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    background: #f8f9fa;
+    max-height: calc(700px - 140px);
+    
+    /* Ukryty scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.app-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Status konta */
+.account-status {
+    margin-bottom: 25px;
+}
+
+.account-status h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.status-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.status-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    min-height: 80px;
+}
+
+.status-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.status-card.active {
+    border: 2px solid #26a69a;
+    background: linear-gradient(135deg, rgba(38, 166, 154, 0.05) 0%, rgba(38, 166, 154, 0.1) 100%);
+}
+
+.status-card.payment {
+    border: 2px solid #ff6b6b;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(255, 107, 107, 0.1) 100%);
+}
+
+.status-icon {
+    font-size: 1.8em;
+    line-height: 1;
+}
+
+.status-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.status-label {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 500;
+}
+
+.status-value {
+    font-weight: 700;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.status-sub {
+    font-size: 0.75em;
+    color: #888;
+    font-weight: 500;
+}
+
+/* Sekcje w aplikacji */
+.payment-section-app,
+.payout-section-app,
+.history-section-app {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.payment-section-app:hover,
+.payout-section-app:hover,
+.history-section-app:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.payment-section-app h4,
+.payout-section-app h4,
+.history-section-app h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Ustawienia płatności */
+.payment-settings {
+    margin-bottom: 15px;
+}
+
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+.setting-row span:first-child {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Toggle switch */
+.toggle {
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background-color: #26a69a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.amount-display {
+    font-weight: 700;
+    color: #7c4dff;
+}
+
+.remaining {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Przyciski w aplikacji */
+.app-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.app-button.primary {
+    background: linear-gradient(135deg, #7c4dff 0%, #6a3de8 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(124, 77, 255, 0.3);
+}
+
+.app-button.secondary {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.app-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.app-button.primary:hover {
+    box-shadow: 0 6px 20px rgba(124, 77, 255, 0.4);
+}
+
+/* Karta wypłaty */
+.payout-card {
+    background: linear-gradient(135deg, #26a69a 0%, #1e8e7f 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(38, 166, 154, 0.3);
+}
+
+.payout-amount {
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.payout-date {
+    opacity: 0.9;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.payout-account {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.account-number {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+/* Historia transakcji */
+.history-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item:hover {
+    background: rgba(124, 77, 255, 0.02);
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.history-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.history-icon.incoming {
+    background: rgba(38, 166, 154, 0.1);
+    color: #26a69a;
+}
+
+.history-icon.outgoing {
+    background: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+}
+
+.history-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.history-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.history-date {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.history-amount {
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.history-amount.positive {
+    color: #26a69a;
+}
+
+.history-amount.negative {
+    color: #ff6b6b;
+}
+
+/* Bottom navigation */
+.app-bottom-nav {
+    background: white;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0 8px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    color: #999;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-size: 0.75em;
+}
+
+.nav-item:hover {
+    background: rgba(124, 77, 255, 0.05);
+    color: #7c4dff;
+}
+
+.nav-item.active {
+    color: #7c4dff;
+    background: rgba(124, 77, 255, 0.1);
+}
+
+.nav-icon {
+    font-size: 1.4em;
+    line-height: 1;
+}
+
+/* Animacje */
+.app-device {
+    animation: phoneSlideIn 0.8s ease-out;
+}
+
+@keyframes phoneSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Pulsing effect dla ważnych elementów */
+.status-card.active .status-icon {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Responsywność dla mockupu aplikacji */
+@media (max-width: 768px) {
+    .app-mockup-container {
+        max-width: 320px;
+    }
+    
+    .device-screen {
+        height: 600px;
+    }
+    
+    .device-frame::before {
+        width: 100px;
+        height: 25px;
+        top: 20px;
+    }
+    
+    .app-header {
+        padding: 35px 15px 15px;
+    }
+    
+    .app-user {
+        margin-right: 15px;
+    }
+    
+    .app-content {
+        padding: 15px;
+    }
+    
+    .status-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .status-card {
+        padding: 12px;
+    }
+    
+    .payment-section-app,
+    .payout-section-app,
+    .history-section-app {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .payout-amount {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-mockup-container {
+        max-width: 280px;
+    }
+    
+    .device-screen {
+        height: 550px;
+    }
+    
+    .app-logo span {
+        font-size: 1.1em;
+    }
+    
+    .user-name {
+        display: none;
+    }
+    
+    .app-user {
+        margin-right: 10px;
+    }
+    
+    .app-header {
+        padding: 30px 15px 15px;
+    }
+}

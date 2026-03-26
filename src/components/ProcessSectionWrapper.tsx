@@ -8,7 +8,7 @@ export default function ProcessWrapper({ children }: { children: React.ReactNode
           overflow-hidden
           before:content-[''] before:absolute before:inset-0
           before:hidden lg:before:block
-          before:bg-[url('/img/process-strip.png')]
+          before:bg-[url('/process-strip.png')]
           before:bg-cover before:bg-center
           before:skew-y-[-4deg]
         "
