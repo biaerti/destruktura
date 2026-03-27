@@ -25,13 +25,8 @@ const projects: { title: string; description: string; image: string | null; href
     image: '/misjonarze_ptga.svg',
     href: '/projects/misjonarze-ptga',
   },
-  {
-    title: 'Abotax',
-    description:
-      'Inicjatywa obywatelska — systemowe rozwiązanie kończące wojnę kulturową. Win-win dla obu stron.',
-    image: 'https://abotax.pl/logo_abotax.png',
-    href: '/projects/abotax',
-  },
+  // Abotax ukryty - projekt jeszcze nieopublikowany
+  // { title: 'Abotax', description: '...', image: 'https://abotax.pl/logo_abotax.png', href: '/projects/abotax' },
   {
     title: 'SlamSlot',
     description:
