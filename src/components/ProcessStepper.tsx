@@ -121,9 +121,9 @@ export default function ProcessStepper() {
   }, []);
 
   return (
-    <section id="process" ref={containerRef} className="bg-black text-white py-0">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 text-center">
+    <section id="process" ref={containerRef} className="bg-black text-white py-0 overflow-visible">
+      <div className="container mx-auto px-6 overflow-visible">
+        <div className="grid md:grid-cols-4 gap-8 text-center overflow-visible">
           {steps.map(({ Icon, title, desc, expandedDesc }, idx) => (
             <div 
               key={idx} 
@@ -147,7 +147,7 @@ export default function ProcessStepper() {
               </p>
               
               {/* Rozszerzony opis - pokazuje się na hover, nad ikoną */}
-              <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 bg-gray-900 border border-red-600/30 rounded-lg p-4 w-96 max-w-md z-10 transition-all duration-300 ${
+              <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 bg-gray-900 border border-red-600/30 rounded-lg p-4 w-96 max-w-md z-50 transition-all duration-300 ${
                 hoveredStep === idx
                   ? 'opacity-100 translate-y-0 pointer-events-auto'
                   : 'opacity-0 translate-y-2 pointer-events-none'
