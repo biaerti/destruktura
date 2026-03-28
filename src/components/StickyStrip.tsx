@@ -16,7 +16,7 @@ export default function StickyStrip() {
             bo głośno mówimy o sprawach przemilczanych i przewracamy tematy do góry nogami.
           </p>
           <p className="text-white font-sans text-lg md:text-xl leading-relaxed" style={{ fontSize: '22px' }}>
-            Wspieramy organizacje pozarządowe, instytucje publiczne i odważne
+            Wspieramy także organizacje pozarządowe, instytucje publiczne i odważne
             marki, które pragną wyjść poza utarte <strong>struktury</strong>.
             Opracowujemy niekonwencjonalne strategie, które pomogą Twojej marce
             podkręcić obroty i zdobyć{" "}<strong>

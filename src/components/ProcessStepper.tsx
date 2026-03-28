@@ -46,7 +46,7 @@ const steps = [
     Icon: ExplosionIcon,      
     title: "Eksplozja",    
     desc: "Produkcja kampanii.",
-    expandedDesc: "Realizujemy wszystko od A do Z – kręcimy video, tworzymy serie postów, grafiki, automatyzacje social mediów z dashboardem do zarządzania. Kreatywne video, serie viralowych TikToków z wykorzystaniem najlepszych technik, posty na wszystkie platformy. To nie Google Ads ani nudny marketing mix, tylko pełnokrwista kreatywna kampania. Robimy hitmanstwo: gdy standardowe metody nie działają, my znajdziemy sposób żeby się przebić przez szum."
+    expandedDesc: "Realizujemy wszystko od A do Z – kręcimy video, tworzymy serie postów, grafiki, automatyzacje social mediów z dashboardem do zarządzania. Kreatywne video, serie viralowych TikToków z wykorzystaniem najlepszych technik, posty na wszystkie platformy. Robimy hitmanstwo: gdy standardowe metody nie działają, my znajdziemy sposób żeby się przebić przez szum. A jak trzeba — Meta Ads, Google Ads, też to ogarniemy."
   },
   { 
     Icon: RocketLaunchIcon,   
@@ -161,20 +161,6 @@ export default function ProcessStepper() {
           ))}
         </div>
         
-        {/* Główny opis pod spodem */}
-        <div className="mt-16 text-center max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-red-900/20 to-black/40 border border-red-600/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-red-500" style={{ fontSize: '24px' }}>
-              Tworzymy kampanie, które nie dają się zignorować
-            </h3>
-            <p className="text-gray-300 text-lg leading-relaxed" style={{ fontSize: '18px' }}>
-              Nie robimy kolejnych reklam Google Ads czy standardowych kampanii marketingowych. 
-              Specjalizujemy się w kreatywnych prowokacjach, które przebijają się przez szum i zmuszają ludzi do reakcji. 
-              Od koncepcji po wdrożenie – video, posty, serie, automatyzacje. 
-              Wszystko po to, żeby Twoja marka przestała być niewidzialna.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
