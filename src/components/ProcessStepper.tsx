@@ -146,13 +146,13 @@ export default function ProcessStepper() {
                 {desc}
               </p>
               
-              {/* Rozszerzony opis - pokazuje się na hover */}
-              <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-4 bg-gray-900 border border-red-600/30 rounded-lg p-4 w-96 max-w-md z-10 transition-all duration-300 ${
-                hoveredStep === idx 
-                  ? 'opacity-100 translate-y-0 pointer-events-auto' 
+              {/* Rozszerzony opis - pokazuje się na hover, nad ikoną */}
+              <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 bg-gray-900 border border-red-600/30 rounded-lg p-4 w-96 max-w-md z-10 transition-all duration-300 ${
+                hoveredStep === idx
+                  ? 'opacity-100 translate-y-0 pointer-events-auto'
                   : 'opacity-0 translate-y-2 pointer-events-none'
               }`}>
-                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-900 border-l border-t border-red-600/30 rotate-45"></div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-900 border-r border-b border-red-600/30 rotate-45"></div>
                 <p className="text-xs text-gray-300 leading-relaxed">
                   {expandedDesc}
                 </p>
