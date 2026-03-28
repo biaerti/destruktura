@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaYoutube } from 'react-icons/fa';
+import { FaYoutube, FaInstagram } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import HeroParticles from '../../components/HeroParticles';
 import DynamicBracketLogo from '../../components/DynamicBracketLogo';
 
-type Socials = Record<string, never>;
+type Socials = { instagram?: string };
 
 const stats = [
   { label: 'Temat', value: 'Tożsamość & konflikt wewnętrzny' },
@@ -25,17 +25,17 @@ const team: {
   {
     name: 'Bartosz Kuniński',
     role: 'Koordynacja, scenariusz filmu',
-    socials: {},
+    socials: { instagram: 'https://www.instagram.com/b.aerti/' },
   },
   {
     name: 'Vladyslav Panchenco',
     role: 'Reżyseria filmu',
-    socials: {},
+    socials: { instagram: 'https://www.instagram.com/vlp_vision_/' },
   },
   {
     name: 'Miłosz Michniewicz',
     role: 'Realizacja audio/video',
-    socials: {},
+    socials: { instagram: 'https://www.instagram.com/milo.jxl/' },
   },
 ];
 
@@ -229,6 +229,11 @@ export default function MisjonarzePTGA() {
               <li key={m.name} className="flex flex-col items-center">
                 <span className="font-semibold">{m.name}</span>
                 <span className="text-sm text-gray-400">{m.role}</span>
+                {m.socials.instagram && (
+                  <a href={m.socials.instagram} target="_blank" rel="noopener noreferrer" className="mt-2 text-gray-400 hover:text-red-600 transition-colors">
+                    <FaInstagram />
+                  </a>
+                )}
               </li>
             ))}
           </ul>
