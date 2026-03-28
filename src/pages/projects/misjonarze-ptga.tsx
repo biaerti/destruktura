@@ -2,17 +2,14 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
-import { SiTiktok } from 'react-icons/si';
+import { FaYoutube } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import HeroParticles from '../../components/HeroParticles';
 import DynamicBracketLogo from '../../components/DynamicBracketLogo';
 
-type Socials = {
-  instagram?: string;
-};
+type Socials = Record<string, never>;
 
 const stats = [
   { label: 'Temat', value: 'Tożsamość & konflikt wewnętrzny' },
@@ -28,17 +25,17 @@ const team: {
   {
     name: 'Bartosz Kuniński',
     role: 'Koordynacja, scenariusz filmu',
-    socials: { instagram: 'https://www.instagram.com/b.aerti/' },
+    socials: {},
   },
   {
     name: 'Vladyslav Panchenco',
     role: 'Reżyseria filmu',
-    socials: { instagram: 'https://www.instagram.com/vlp_vision_/' },
+    socials: {},
   },
   {
     name: 'Miłosz Michniewicz',
     role: 'Realizacja audio/video',
-    socials: { instagram: 'https://www.instagram.com/milo.jxl/' },
+    socials: {},
   },
 ];
 
@@ -232,13 +229,6 @@ export default function MisjonarzePTGA() {
               <li key={m.name} className="flex flex-col items-center">
                 <span className="font-semibold">{m.name}</span>
                 <span className="text-sm text-gray-400">{m.role}</span>
-                <div className="flex space-x-4 mt-2">
-                  {m.socials.instagram && (
-                    <a href={m.socials.instagram} target="_blank" rel="noopener noreferrer">
-                      <FaInstagram className="hover:text-red-600" />
-                    </a>
-                  )}
-                </div>
               </li>
             ))}
           </ul>
@@ -249,17 +239,8 @@ export default function MisjonarzePTGA() {
         <section className="py-12 px-4">
           <h3 className="text-3xl text-center mb-6">Znajdź Misjonarzy PTGA</h3>
           <div className="flex justify-center space-x-8 text-2xl text-gray-400">
-            <a href="https://www.facebook.com/misjonarze.ptga/" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
-              <FaFacebookF />
-            </a>
             <a href="https://www.youtube.com/@MisjonarzePTGA" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
               <FaYoutube />
-            </a>
-            <a href="https://www.tiktok.com/@misjonarze_ptga" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
-              <SiTiktok />
-            </a>
-            <a href="https://www.instagram.com/misjonarze_ptga/" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
-              <FaInstagram />
             </a>
           </div>
         </section>

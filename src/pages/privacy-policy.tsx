@@ -24,10 +24,10 @@ const PrivacyPolicy = () => {
               <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników w związku z korzystaniem przez nich z usług oferowanych przez stronę internetową Destruktura.</p>
               <p>Administratorem danych osobowych zawartych na stronie jest:</p>
               <div className="bg-gray-900 p-4 rounded-lg my-4">
-                <p>Bartosz Kuniński</p>
-                <p>Wojska Polskiego 31/23</p>
-                <p>18-400 Łomża</p>
-                <p>E-mail: bartosz.kuninski@gmail.com</p>
+                <p>Fundacja Destruktura</p>
+                <p>KRS: 0001060535 | NIP: 9562387256 | REGON: 526476936</p>
+                <p>Lotników 9B/7, 87-100 Toruń</p>
+                <p>E-mail: kontakt@destruktura.pl</p>
               </div>
             </section>
 
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
                 <li>Sprzeciwu wobec przetwarzania danych</li>
                 <li>Wycofania zgody na przetwarzanie danych osobowych w dowolnym momencie</li>
               </ul>
-              <p>Aby skorzystać z powyższych praw, należy skontaktować się z Administratorem poprzez adres e-mail: bartosz.kuninski@gmail.com</p>
+              <p>Aby skorzystać z powyższych praw, należy skontaktować się z Administratorem poprzez adres e-mail: kontakt@destruktura.pl</p>
             </section>
 
             <section className="mb-10">
@@ -81,7 +81,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">6. Bezpieczeństwo danych</h2>
               <p>Administrator stosuje odpowiednie środki techniczne i organizacyjne zapewniające ochronę przetwarzanych danych osobowych przed nieuprawnionym dostępem, zmianą, ujawnieniem i zniszczeniem.</p>
-              <p>W przypadku pytań dotyczących Polityki Prywatności, prosimy o kontakt na adres e-mail: bartosz.kuninski@gmail.com</p>
+              <p>W przypadku pytań dotyczących Polityki Prywatności, prosimy o kontakt na adres e-mail: kontakt@destruktura.pl</p>
             </section>
           </div>
         </div>

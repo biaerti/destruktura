@@ -110,7 +110,7 @@ export default function ContactForm() {
               className="mt-1 accent-red-600"
             />
             <label htmlFor="agree" className="text-xs text-gray-400 font-sans">
-              Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przygotowania wyceny.
+              Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu w sprawach komercyjnych.
             </label>
           </div>
 
