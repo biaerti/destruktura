@@ -30,7 +30,7 @@ export default function AboutUs() {
             Kim jesteśmy
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Grupa pasjonatów, których łączy zamiłowanie do kontrowersji i kreatywnych projektów
+            Niszczymy dotychczasowe perspektywy i budujemy coś nowego na ich gruzach.
           </p>
         </div>
       </section>
@@ -42,13 +42,10 @@ export default function AboutUs() {
           <h2 className="text-3xl font-montserrat font-normal mb-8">Nasza filozofia</h2>
           <div className="prose prose-invert max-w-none">
             <p className="text-xl leading-relaxed mb-6">
-              Destruktura powstała z zapału do tworzenia czegoś nowego. Jesteśmy grupą pasjonatów, którzy łączą się w różnych konfiguracjach do realizacji konkretnych projektów.
-            </p>
-            <p className="text-xl leading-relaxed mb-6">
-              Nazwa Destruktura nie tylko nawiązuje do tego, że w naszych projektach czasem kogoś lub coś "niszczymy" – pokazując nowe perspektywy i łamiąc dotychczasowe schematy – ale również obrazuje nasz proces pracy. Tworzymy, iterujemy, wyrzucamy i budujemy na nowo, aż osiągniemy zamierzony efekt.
+              Destruktura powstała by niszczyć dotychczasowe perspektywy i budować coś nowego na ich gruzach.
             </p>
             <p className="text-xl leading-relaxed">
-              Pracujemy w ciągłym napięciu między destrukcją i konstrukcją. W fizyce cząstki zderzają się, by uwolnić energię. W kulturze – idee. W tym procesie – my jesteśmy zderzaczem.
+              Bartosz Kuniński i Vladyslav Panchenko.
             </p>
           </div>
         </section>
@@ -145,8 +142,8 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
-        {/* Jak pracujemy section - poprawiona animacja */}
-        <section className="max-w-4xl mx-auto py-16 px-6">
+        {/* Jak pracujemy section - tymczasowo ukryta */}
+        {false && <section className="max-w-4xl mx-auto py-16 px-6">
           <h2 className="text-3xl font-montserrat font-normal mb-8">Jak pracujemy</h2>
           
           <div className="relative" style={{ minHeight: "500px" }}>
@@ -215,13 +212,13 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-        </section>
+        </section>}
       </main>
 
       <Footer />
 
-      {/* Style dla animacji */}
-      <style jsx global>{`
+      {/* Style dla animacji - ukryte wraz z sekcją "Jak pracujemy" */}
+      {false && <style jsx global>{`
         /* Font Montserrat */
         .font-montserrat {
           font-family: 'Montserrat', sans-serif;
@@ -714,7 +711,7 @@ export default function AboutUs() {
             transform: translate(-50%, -50%) scale(1.5);
           }
         }
-      `}</style>
+      `}</style>}
     </>
   );
 }
