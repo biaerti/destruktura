@@ -72,10 +72,10 @@ export default function AboutUs() {
                 <p className="text-red-600 uppercase tracking-wider text-sm mb-4">Chief Experiments Operator</p>
                 
                 <p className="text-gray-300 mb-4">
-                  Długo tworzył muzykę jako biaerti, następnie slamował na slamach poetyckich, występując na VIII Ogólnopolskich Mistrzostwach Slamu Poetyckiego. Całe życie pisze teksty wyłamujące się poza utarte schematy.
+                  Od 2017 tworzy muzykę jako biaerti, od 2023 występuje na slamach poetyckich — w tym na VIII Ogólnopolskich Mistrzostwach Slamu Poetyckiego. Jego celem jest tworzenie tekstów i koncepcji, które wyłamują się poza utarte schematy.
                 </p>
                 <p className="text-gray-300 mb-4">
-                  Z wykształcenia psycholog, co pozwala mu głęboko rozumieć reakcje społeczne. Z zawodu zajmuje się także automatyzacjami procesów biznesowych, co daje mu szersze spojrzenie na funkcjonowanie biznesu.
+                  Z wykształcenia psycholog — rozumie reakcje społeczne i mechanizmy wpływu. Zajmuje się też automatyzacjami i systemami produktywności, co przekłada się na sprawne wdrażanie nawet złożonych projektów.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 mt-2">
